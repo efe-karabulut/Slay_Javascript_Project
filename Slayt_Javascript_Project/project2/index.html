@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project2</title>
+    <style>
+        div {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+        }
+
+        button {
+            margin: 1rem;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .aqua {
+            background-color: aqua;
+        }
+
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .parent {
+            display: inline-block;
+        }
+
+        .divim {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toRow {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .toColumn {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <ul id="listeler"></ul>
+        <button onclick="ekle()">Ekleme yap</button>
+    </div>
+
+
+
+
+    <button onclick="topla()">Toplama Sorusu</button>
+    <button onclick="cikart()">Çıkartma Sorusu</button>
+    <button onclick="carp()">Çıkartma Sorusu</button>
+
+
+    <div>
+        <button id="whiteButton" onclick="white()">White</button>
+        <button id="greenButton" onclick="green()">Green</button>
+        <button id="pinkButton" onclick="aqua()">Aqua</button>
+    </div>
+
+
+    <div class="parent">
+        <div id="column" class="divim">
+            <img src="./public/1077114.png" alt="#">
+            <img src="./public/1077114.png" alt="#">
+            <img src="./public/1077114.png" alt="#">
+        </div>
+    </div>
+
+
+    <button onclick="row()">Yanyana getir!</button>
+    <button onclick="column()">Dikey yap!</button>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
