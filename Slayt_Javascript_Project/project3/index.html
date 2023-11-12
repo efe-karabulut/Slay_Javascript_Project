@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+
+        /* body.dark {
+            background-color: rgb(43, 43, 43);
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="next()">Next</button>
+        <button onclick="back()">Back</button>
+    </div>
+    <!-- <input oninput="input(event)" type="text" id="input"> -->
+
+    <!-- <button id="myButton" onclick="showImg()">Ön İzlemeyi Göster</button> -->
+
+    <!-- <button onclick="darkMode(this)">Change Dark</button> -->
+
+    <script>
+        // 1. javascript kullanarak bir div, div'e class olarak container verin daha sonra o divin içine p oluşturun.
+        // const div = document.createElement("div")
+        // document.body.append(div);
+        // div.classList.add("container")
+        // const p = document.createElement("p")
+        // div.appendChild(p)
+
+
+
+
+
+
+
+        // 2. bir input oluşturun ve inputun değeri her değiştiğinde sayfanın başlığıda değişsin.
+        // function input(e) {
+        //     document.title = e.target.value
+        // }
+
+
+
+
+        // 3. rastgele resim linkleri (url) içeren bir array oluşturun ve html de önizlemeleri göster adında bir buton oluşturun, butona tıklandığında arraydaki tüm linkleri img etiketi olarak body'e yazdırın.
+
+        // function showImg() {
+        //     const imgUrl = [
+        //         "https://t4.ftcdn.net/jpg/05/47/97/81/360_F_547978128_vqEEUYBr1vcAwfRAqReZXTYtyawpgLcC.jpg",
+
+        //         "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=",
+
+        //         "https://static.vecteezy.com/system/resources/thumbnails/025/284/015/small_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg"
+        //     ]
+
+
+        //     imgUrl.forEach(function (url) {
+        //         const img = document.createElement("img")
+        //         img.src = url
+        //         img.style.width = "200px"
+        //         img.style.height = "200px"
+        //         document.body.append(img)
+        //     })
+        // }
+
+
+
+
+
+
+
+
+
+        // 4. karanlık mod, aydınlık mod özelliğini sayfaya entegre edin.
+        // function darkMode(btn) {
+        //     const mod = document.body
+        //     mod.classList.toggle("dark")
+        //     if (btn.innerText === "Change Dark") {
+        //         btn.innerText = "Change White"
+        //     } else {
+        //         btn.innerText = "Change Dark"
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+        // 5. geri, ileri adında iki tane buton oluşturun ve javascript tarafında ise rastgele resim linkleri içeren bir array oluşturun ileri butonuna basıldığında bu arraydaki resimlerin indeks numarasını kullanarak tek tek yazdırın. 
+        const imgUrls = [
+            "https://t4.ftcdn.net/jpg/05/47/97/81/360_F_547978128_vqEEUYBr1vcAwfRAqReZXTYtyawpgLcC.jpg",
+
+
+            "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=",
+
+            "https://static.vecteezy.com/system/resources/thumbnails/025/284/015/small_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg"
+        ]
+        let index = 0
+
+        function next() {
+
+            if (index < imgUrls.length) {
+                const img = document.createElement("img")
+                img.src = imgUrls[index]
+                document.body.append(img)
+                index++;
+                console.log(index)
+            }
+        }
+
+
+        function back() {
+
+            if (index > 0) {
+                index--;
+                document.body.removeChild(document.body.lastChild)
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
